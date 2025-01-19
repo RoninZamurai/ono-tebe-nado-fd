@@ -196,8 +196,8 @@ button{
   
 .lots__card-list{
   display: grid;
-  grid-auto-rows: 1fr;
-  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr; /** 3 колонки для элементов. При добавлении 4-это элемента, он уходит на следующую строчку. Сразу видно, что по дизайну элементы должны быть в 3 колонки. Задание выполнено, но без flex-wrap **/
+  row-gap: 25px;
   column-gap: 25px;
   width: 100%;
   list-style: none;
@@ -229,7 +229,7 @@ button{
   }
 
 .card_type_film{
-  background-image: url(../images/card-lot-01.jpg); /** Затемняет фотографию под низом **/
+  background-image: url(../images/card-lot-01.jpg); 
   }
   
 .card_type_book{
