@@ -315,6 +315,12 @@ button{
   width: 693px;
   }
   
+  .about__br{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
 .footer{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
