@@ -85,6 +85,8 @@
   position: absolute;
   z-index: 1;
   color: #fff;
+  filter: brightness(60%);/** Затемняет фотографию под низом **/
+  backdrop-filter: brightness(0.6);
   }
   
 .title__block {
@@ -102,6 +104,8 @@
   letter-spacing: 0.3em;
   margin-right: -0.3em;
   text-transform: uppercase;
+  z-index: 2;
+  position: relative;
   }
   
 .aligned-text{
@@ -208,6 +212,7 @@ button{
   
 .card{
   display: flex;
+  flex-wrap: nowrap;
   position: relative;
   flex-direction: column;
   row-gap: 30px;
@@ -220,25 +225,19 @@ button{
   background-position: center;
   background-size: cover;
   max-width: 334px;
-  }
-  
-  .card_type_film,
-  .card_type_book,
-  .card_type_picture{
-    background-color: #919191;
-
+  background-color: #919191;
   }
 
 .card_type_film{
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../images/card-lot-01.jpg); /** Затемняет фотографию под низом **/
+  background-image: url(../images/card-lot-01.jpg); /** Затемняет фотографию под низом **/
   }
   
 .card_type_book{
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(../images/card-lot-02.jpg);
+  background-image: url(../images/card-lot-02.jpg);
   }
   
 .card_type_picture{
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(../images/card-lot-03.jpg);
+  background-image: url(../images/card-lot-03.jpg);
   }
 
   
@@ -248,6 +247,7 @@ button{
   line-height: 120%;
   text-decoration: underline;
   text-transform: uppercase;
+  z-index: 2;
   }
   
 .card__text{
@@ -255,6 +255,7 @@ button{
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
+  z-index: 2;
   }
   
 .lots__look-more-link{
@@ -318,7 +319,7 @@ button{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
-  padding: 0 50px;
+  padding: 5px 50px 0;
   }
   
 .footer__menu{
